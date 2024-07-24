@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Shayan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
       height: 100vh;
       position: relative;
+      /background: linear-gradient(135deg, #40E0D0, #FFD700, #DC143C);/
       background: linear-gradient(135deg, #0072FF, #00C6FF, #FFD700, #FF6347);
+/* Blue to light blue to gold to coral */
+
       background-size: 600% 600%;
       animation: gradient 16s ease infinite;
     }
@@ -92,18 +93,15 @@
       padding: 20px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .header h1 {
-      font-family: 'Pacifico', cursive;
       font-size: 3em;
       animation: type 3s steps(22) 1s 1 normal both;
       white-space: nowrap;
       overflow: hidden;
       border-right: 0.15em solid orange;
       display: inline-block;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     .birthday-message, .gallery, .footer {
@@ -115,14 +113,10 @@
     }
 
     .footer {
+      position: fixed;
       background: #ff69b4;
       width: 100%;
       bottom: 0;
-      padding: 10px 0;
-      color: white;
-      text-align: center;
-      position: fixed;
-      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .gallery {
@@ -239,7 +233,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.8);
+      /background: rgba(0, 0, 0, 0.5);/
+      background: black;
       z-index: 999;
       animation: zoomIn 0.5s ease-out;
     }
@@ -261,42 +256,7 @@
       border-radius: 13px;
       pointer-events: none;
     }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      width: 80%;
-      max-width: 700px;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 25px;
-      color: #fff;
-      font-size: 35px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #f00;
-      text-shadow: 0 0 10px #f00;
-    }
+    
 
     @media (max-width: 768px) {
       .header h1 {
@@ -358,9 +318,13 @@
 
     <div class="birthday-message">
       <p>🎈 Dear Shayan,</p>
-      <p>Happiest birthday to someone who is so special, The person with whom I share same interests. The person on whom I have right to scold, or laugh or be mad. The one who is always there to stand with me ❤...the one who cares about me...</p>
-      <p>Wishing you a beautiful day with happiness and good health forever∞</p>
-      <p>May all your wishes and desires come true! Have an amazing year ahead.</p>
+      <!--<p>Wishing you a day filled with love, joy, and all your favorite things. Happy Birthday! 🎁</p>-->
+      <p>Happiest birthday to someone who is so special, The person with whom I share same interests. The person on whom I have right to scold,or laugh or being mad. The one who is always there to stand with me ❤..the one who cares about me...
+
+Wishing you a beautiful day with happiness and good health forever∞
+
+May all your wishes and desires come true! Have an amazing year ahead.
+</p>
       <p>Your well wisher, Chirag</p>
     </div>
 
@@ -375,14 +339,10 @@
       <img src="https://via.placeholder.com/100/00FFFF/000000?text=6" alt="Photo 6" onclick="openImage('i7.jpeg')">
       <img src="https://via.placeholder.com/100/000000/FFFFFF?text=7" alt="Photo 7" onclick="openImage('i2.jpeg')">
     </div>
+    
 
     <div class="footer">
       <p>&copy; 2024 Happy Birthday Shayan</p>
-      <div>
-        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      </div>
     </div>
   </div>
 
@@ -422,7 +382,7 @@
       for (let i = 0; i < 5; i++) {
         const candle = document.createElement('div');
         candle.className = 'candle';
-        candle.style.left = `${20 * (i + 1)}%`;
+        candle.style.left = ${20 * (i + 1)}%;
         header.appendChild(candle);
 
         const flame = document.createElement('div');
@@ -443,19 +403,52 @@
 
     const balloons = document.querySelectorAll('.balloon');
     balloons.forEach(balloon => {
-      balloon.style.animation = `float ${Math.random() * 3 + 3}s ease-in-out infinite`;
+      balloon.style.animation = float ${Math.random() * 3 + 3}s ease-in-out infinite;
     });
 
     const galleryImages = document.querySelectorAll('.gallery img');
     galleryImages.forEach((img, index) => {
-      img.style.animation = `fadeIn ${1 + index * 0.5}s ease-in-out both`;
+      img.style.animation = fadeIn ${1 + index * 0.5}s ease-in-out both;
     });
 
     function openImage(imageName) {
-      const modal = document.getElementById('myModal');
-      const modalImage = document.getElementById('modalImage');
-      modal.style.display = 'flex';
-      modalImage.src = imageName;
+      const imageContainer = document.createElement('div');
+      imageContainer.classList.add('image-container');
+      imageContainer.style.display = 'flex';
+      imageContainer.style.justifyContent = 'center';
+      imageContainer.style.alignItems = 'center';
+      imageContainer.style.position = 'fixed';
+      imageContainer.style.top = '0';
+      imageContainer.style.left = '0';
+      imageContainer.style.width = '100%';
+      imageContainer.style.height = '100%';
+      imageContainer.style.background = 'rgba(0, 0, 0, 0.5)';
+      /imageContainer.style.background = 'black';/
+      imageContainer.style.zIndex = '999';
+      imageContainer.style.animation = 'zoomIn 0.5s ease-out';
+
+      const roundedBorder = document.createElement('div');
+      roundedBorder.classList.add('rounded-border');
+      roundedBorder.style.width = 'calc(80% + 20px)';
+      roundedBorder.style.height = 'calc(80% + 20px)';
+      roundedBorder.style.position = 'absolute';
+      /roundedBorder.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';/
+      imageContainer.style.background = 'black';
+      roundedBorder.style.borderRadius = '20px';
+      imageContainer.appendChild(roundedBorder);
+
+      const image = document.createElement('img');
+      image.src = imageName;
+      image.style.maxWidth = '80%';
+      image.style.maxHeight = '80%';
+      image.style.borderRadius = '10px';
+
+      imageContainer.appendChild(image);
+      document.body.appendChild(imageContainer);
+
+      imageContainer.addEventListener('click', () => {
+        imageContainer.remove();
+      });
     }
 
     function closeModal() {
@@ -465,4 +458,3 @@
   </script>
 </body>
 </html>
-
