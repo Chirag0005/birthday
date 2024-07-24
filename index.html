@@ -12,7 +12,7 @@
       overflow-x: hidden;
       height: 100vh;
       position: relative;
-      /background: linear-gradient(135deg, #40E0D0, #FFD700, #DC143C);/
+      /*background: linear-gradient(135deg, #40E0D0, #FFD700, #DC143C);*/
       background: linear-gradient(135deg, #0072FF, #00C6FF, #FFD700, #FF6347);
 /* Blue to light blue to gold to coral */
 
@@ -233,7 +233,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      /background: rgba(0, 0, 0, 0.5);/
+      /*background: rgba(0, 0, 0, 0.5);*/
       background: black;
       z-index: 999;
       animation: zoomIn 0.5s ease-out;
@@ -382,7 +382,7 @@ May all your wishes and desires come true! Have an amazing year ahead.
       for (let i = 0; i < 5; i++) {
         const candle = document.createElement('div');
         candle.className = 'candle';
-        candle.style.left = ${20 * (i + 1)}%;
+        candle.style.left = `${20 * (i + 1)}%`;
         header.appendChild(candle);
 
         const flame = document.createElement('div');
@@ -403,12 +403,12 @@ May all your wishes and desires come true! Have an amazing year ahead.
 
     const balloons = document.querySelectorAll('.balloon');
     balloons.forEach(balloon => {
-      balloon.style.animation = float ${Math.random() * 3 + 3}s ease-in-out infinite;
+      balloon.style.animation = `float ${Math.random() * 3 + 3}s ease-in-out infinite`;
     });
 
     const galleryImages = document.querySelectorAll('.gallery img');
     galleryImages.forEach((img, index) => {
-      img.style.animation = fadeIn ${1 + index * 0.5}s ease-in-out both;
+      img.style.animation = `fadeIn ${1 + index * 0.5}s ease-in-out both`;
     });
 
     function openImage(imageName) {
@@ -423,7 +423,7 @@ May all your wishes and desires come true! Have an amazing year ahead.
       imageContainer.style.width = '100%';
       imageContainer.style.height = '100%';
       imageContainer.style.background = 'rgba(0, 0, 0, 0.5)';
-      /imageContainer.style.background = 'black';/
+      /*imageContainer.style.background = 'black';*/
       imageContainer.style.zIndex = '999';
       imageContainer.style.animation = 'zoomIn 0.5s ease-out';
 
@@ -432,7 +432,7 @@ May all your wishes and desires come true! Have an amazing year ahead.
       roundedBorder.style.width = 'calc(80% + 20px)';
       roundedBorder.style.height = 'calc(80% + 20px)';
       roundedBorder.style.position = 'absolute';
-      /roundedBorder.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';/
+      /*roundedBorder.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';*/
       imageContainer.style.background = 'black';
       roundedBorder.style.borderRadius = '20px';
       imageContainer.appendChild(roundedBorder);
